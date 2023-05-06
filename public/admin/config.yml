@@ -7,6 +7,23 @@ media_folder: "public/img" # Folder where user uploaded files should go
 public_folder: "/img" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
+  # Hero
+  - name: Hero
+    label: Hero
+    folder: src/contents/hero
+    create: true
+    fields:
+      - { name: aboutTitle, label: About_Title, widget: string }
+      - { name: timeTxt1, label: time_Text1, widget: string }
+      - { name: timeTxt2, label: time_Text2, widget: string }
+      - { name: time, label: Time, widget: string }
+      - { name: image1, label: Image_1, widget: image }
+      - { name: image2, label: Image_2, widget: image }
+      - { name: description, label: Description, widget: string }
+      - { name: button, label: Button, widget: string }
+      - { name: para1, label: Paragraph, widget: string }
+      - { name: para2, label: Paragraph_2, widget: string }
+
   # About
   - name: About
     label: about
