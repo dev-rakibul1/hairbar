@@ -1,0 +1,637 @@
+---
+title: Home
+layout: "base.njk"
+---
+
+<!-- Start page-wrap -->
+<div class="page-wrap">
+  <!--======================================
+        START HERO
+======================================-->
+  <section class="hero-section on-dark">
+    <div class="hero-slider owl-carousel owl-theme">
+      {%- for hero in collections.hero -%}
+
+      <div class="hero-item set-bg overlay" data-setbg="{{ hero.data.image }}">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="hero-content">
+                <h1 class="hero-title mb-4">
+                  {{ hero.data.title }}
+                </h1>
+                <p class="hero-text">
+                  {{ hero.data.para1 }}
+                </p>
+                <div class="gap-2x"></div>
+                <!-- end gap -->
+                <ul class="hero-btns btns-group">
+                  <li>
+                    <a
+                      href="contact.html"
+                      class="btn btn-lg btn-round-none btn-primary"
+                    >
+                      {{ hero.data.btn2 }}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="about-us.html"
+                      class="btn btn-lg btn-round-none btn-outline-light"
+                      >{{ hero.data.btn1 }}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </div>
+      {%- endfor -%}
+
+      <!-- end hero-item -->
+    </div>
+    <!-- end hero-slider-->
+  </section>
+  <!-- end hero-section -->
+  <!--======================================
+        END HERO
+======================================-->
+
+  <!--======================================
+        START ABOUT
+ ======================================-->
+  <section class="about-section section-space bg-primary-100">
+    <div class="container">
+      <div class="row align-items-center">
+        {%- for about in collections.about -%}
+
+        <div class="col-lg-6">
+          <div class="section-content pr-lg-5 mb-5 mb-lg-0">
+            <h1 class="section-title mb-3">About Us</h1>
+            <p class="lead">{{ about.data.aboutTitle }}</p>
+            <p>
+              {{ about.data.para1 }}
+            </p>
+            <p>
+              {{ about.data.para2 }}
+            </p>
+            <h4 class="opening-hour mt-4">
+              {{ about.data.timeTxt1 }} <span> {{ about.data.time }}</span>
+              {{ about.data.timeTxt2 }}
+            </h4>
+            <div class="gap-2x"></div>
+            <a
+              href="about-us.html"
+              class="btn btn-lg btn-round-none btn-primary"
+              >{{ about.data.btn }}</a
+            >
+          </div>
+          <!-- end section-content -->
+        </div>
+        {%-endfor-%}
+        <!-- end col -->
+        {%- for about in collections.about -%}
+        <div class="col-lg-6">
+          <div class="img-box">
+            <div
+              class="img-large"
+              data-aos="zoom-out"
+              data-aos-delay="50"
+              data-aos-duration="500"
+            >
+              <img src="{{ about.data.image1 }}" alt="about image" />
+            </div>
+            <!-- end img-large -->
+            <div
+              class="img-small"
+              data-aos="zoom-out"
+              data-aos-delay="150"
+              data-aos-duration="700"
+            >
+              <img src="{{ about.data.image2 }}" alt="about image" />
+            </div>
+            <!-- end img-small -->
+          </div>
+          <!-- end img-box -->
+        </div>
+        {%-endfor-%}
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end about-section -->
+  <!--======================================
+        END ABOUT
+======================================-->
+
+  <!--======================================
+        START SERVICE
+ ======================================-->
+  <section class="service-section section--space">
+    <div class="container">
+      <div class="section-head text-center">
+        <h1 class="section-title">Our Services</h1>
+      </div>
+
+      <!-- end section-head -->
+      <div class="row">
+        {%- for service in collections.service -%}
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="card card-s1 card-service text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="500"
+          >
+            <div class="card-image">
+              <img
+                src="{{ service.data.image }}"
+                alt="service image"
+                class="card-img-top"
+              />
+            </div>
+            <div class="card-body">
+              <div class="icon-element">
+                <span class="fal fa-hand-scissors"></span>
+              </div>
+              <h4 class="card-title mb-3">{{ service.data.servicesTitle }}</h4>
+              <p class="card-text">
+                {{ service.data.description }}
+              </p>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+        {%- endfor -%}
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end service-section -->
+  <!--======================================
+        END SERVICE
+======================================-->
+
+  <!--======================================
+        START WORKING
+ ======================================-->
+  <section
+    class="working-section section--space set-bg overlay"
+    data-setbg="img/cta-bg.jpg"
+  >
+    <div class="container">
+      <div class="section-head text-center">
+        <h1 class="section-title text-white">Working Hours</h1>
+      </div>
+      <!-- end section-head -->
+      <div class="row">
+        {%- for hours in collections.hours -%}
+
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <div
+            class="timer-box text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="500"
+          >
+            <div class="timer-body">
+              <h3 class="mb-3 timer-title">{{ hours.data.day }}</h3>
+              <ul class="timer-list">
+                <li>{{ hours.data.timeTxt1 }}</li>
+                <li>{{ hours.data.timeCenterText }}</li>
+                <li>{{ hours.data.timeTxt2 }}</li>
+              </ul>
+            </div>
+          </div>
+          <!-- end working-box -->
+        </div>
+        {%- endfor -%}
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end working-section -->
+  <!--======================================
+        END WORKING
+======================================-->
+
+  <!--======================================
+        START PRICING
+ ======================================-->
+  <section class="pricing-section section--space">
+    <div class="container">
+      <div class="section-head text-center">
+        <h1 class="section-title">Our Pricing</h1>
+      </div>
+      <!-- end section-head -->
+
+      <div class="row">
+        {%-for pricing in collections.pricing-%}
+        <div
+          class="col-lg-6 pr-lg-4"
+          data-aos="fade-in"
+          data-aos-delay="50"
+          data-aos-duration="800"
+        >
+          <div class="media media-s1 align-items-center">
+            <img
+              src="{{ pricing.data.image }}"
+              class="media-img"
+              alt="srvice image"
+            />
+            <div class="media-body">
+              <div
+                class="price-info d-flex align-items-center justify-content-between mb-1"
+              >
+                <h5 class="media-title">{{ pricing.data.pricingTitle }}</h5>
+                <span class="price-divider"></span>
+                <span class="media-subtitle">{{ pricing.data.price }}</span>
+              </div>
+              <p>{{ pricing.data.desc }}</p>
+            </div>
+          </div>
+          <!-- end media -->
+        </div>
+
+        {%-endfor-%}
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end pricing-section -->
+  <!--======================================
+        END PRICING
+======================================-->
+
+  <!--======================================
+        START TESTIMONIAL
+======================================-->
+  <section class="testimonial-section text-center section-space bg-primary-100">
+    <div class="container">
+      <div class="section--head">
+        <h1 class="section-title">Testimonial</h1>
+      </div>
+      <!-- end section-head -->
+      <div class="testimonial-slider owl-carousel owl-theme">
+        {%-for testimonial in collections.testimonial-%}
+
+        <div class="testimonial-item">
+          <p class="lead mb-4">{{ testimonial.data.desc }}</p>
+          <div class="avatar mx-auto mb-3">
+            <img src="{{ testimonial.data.image }}" alt="" />
+          </div>
+          <h5 class="testimonial-title">
+            {{ testimonial.data.testimonialTitle }}
+          </h5>
+        </div>
+        {%-endfor-%}
+      </div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!--======================================
+        END TESTIMONIAL
+======================================-->
+
+  <!--======================================
+        START TEAM
+======================================-->
+  <section class="team-section section--space">
+    <div class="container">
+      <div class="section-head text-center">
+        <h1 class="section-title">Our Team</h1>
+      </div>
+      <!-- end section-head -->
+      <div class="row">
+        {%-for team in collections.team-%}
+        <div class="col-lg-4 col-sm-6">
+          <div
+            class="card card-s1 card-team text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="500"
+          >
+            <div class="card-image">
+              <img
+                src="{{ team.data.image }}"
+                alt="team image"
+                class="card-img-top"
+              />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title mb-1">{{ team.data.name }}</h4>
+              <p class="card-text">{{ team.data.profession }}</p>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+        {%-endfor-%}
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end team-section -->
+  <!--======================================
+        END TEAM
+======================================-->
+
+  <!--======================================
+        START PRODUCT
+======================================-->
+  <section class="product-section section--space bg-primary-100">
+    <div class="container">
+      <div class="section-head text-center">
+        <h1 class="section-title">Our Products</h1>
+      </div>
+      <!-- end section-head -->
+      <div class="row">
+        {%-for products in collections.products-%}
+
+        <div class="col-lg-6">
+          <div
+            class="media media-s2 align-items-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="500"
+          >
+            <a href="product-details.html">
+              <img
+                src="{{ products.data.image }}"
+                class="media-img"
+                alt="product image"
+              />
+            </a>
+            <div class="media-body">
+              <h5 class="media-title mb-2">
+                <a href="product-details.html">{{ products.data.title }}</a>
+              </h5>
+              <p>
+                {{ products.data.desc }}
+              </p>
+              <div
+                class="product-action-box d-flex align-items-center justify-content-between mt-4"
+              >
+                <a href="#" class="btn btn-primary">{{ products.data.btn }}</a>
+                <span class="product-price">{{ products.data.price }}</span>
+              </div>
+            </div>
+          </div>
+          <!--- end media -->
+        </div>
+        {%-endfor-%}
+
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end product-section -->
+  <!--======================================
+        END PRODUCT
+======================================-->
+
+  <!--======================================
+        START COUNTER
+======================================-->
+  <section class="counter-section section--space">
+    <div class="container">
+      <div class="row">
+        {%-for count in collections.count-%}
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="counter-item">
+            <div class="icon-element mr-3">
+              <span class="fal fa-users"></span>
+            </div>
+            <div class="counter-body">
+              <h4 class="counter-title">{{ count.data.user }}</h4>
+              <span class="counter-subtitle">{{ count.data.title }}</span>
+            </div>
+          </div>
+          <!-- end counter-item -->
+        </div>
+        {%-endfor-%}
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end counter-section -->
+  <!--======================================
+        END COUNTER
+======================================-->
+
+  <hr class="my-0" />
+
+  <!--======================================
+        START CTA
+======================================-->
+  <section class="cta-section section--space">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          {%-for appointment in collections.appointment-%}
+
+          <div
+            class="section-content pr-lg-5 mb-5 mb-lg-0"
+            data-aos="fade-in"
+            data-aos-delay="50"
+            data-aos-duration="800"
+          >
+            <h1 class="section-title mb-4">{{ appointment.data.title }}</h1>
+            <p>
+              {{ appointment.data.para1 }}
+            </p>
+            <p>
+              {{ appointment.data.para2 }}
+            </p>
+            <p>
+              {{ appointment.data.para3 }}
+            </p>
+          </div>
+          {%-endfor-%}
+          <!-- end section-content -->
+        </div>
+        <!-- end col -->
+        <div class="col-lg-6">
+          <div
+            class="form-box card card-s1"
+            data-aos="fade-in"
+            data-aos-delay="250"
+            data-aos-duration="1200"
+          >
+            <div class="card-body">
+              <h1 class="card-title mb-4">Book Now</h1>
+              <form action="#">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-s1"
+                        placeholder="Enter name"
+                      />
+                    </div>
+                    <!-- end form-group -->
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                      <input
+                        type="email"
+                        class="form-control form-control-s1"
+                        placeholder="Enter email"
+                      />
+                    </div>
+                    <!-- end form-group -->
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-s1"
+                        placeholder="Phone"
+                      />
+                    </div>
+                    <!-- end form-group -->
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                      <input type="date" class="form-control form-control-s1" />
+                    </div>
+                    <!-- end form-group -->
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                      <select class="form-nice-select mb-4 nice-select-full">
+                        <option value="Popularity">Popularity</option>
+                        <option value="1">Hair Cuttings</option>
+                        <option value="2">Hair Coloring</option>
+                        <option value="3">Hair Styling</option>
+                      </select>
+                    </div>
+                    <!-- end form-group -->
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                      <select class="form-nice-select mb-4 nice-select-full">
+                        <option>Choose Barbers</option>
+                        <option>Alex Barber</option>
+                        <option>Samim Barber</option>
+                        <option>Smkit Barber</option>
+                      </select>
+                    </div>
+                    <!-- end form-group -->
+                  </div>
+                  <!-- end col -->
+                </div>
+                <!-- end row -->
+                <div class="form-group mb-4">
+                  <textarea
+                    class="form-control form-control-s1 form-control-message"
+                    name="message"
+                    placeholder="Write message"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-round-none btn-primary"
+                >
+                  Book Appointment
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- end form-box -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end cta-section -->
+  <!--======================================
+        END CTA
+======================================-->
+
+  <hr class="my-0" />
+
+  <!--======================================
+        START BLOG
+======================================-->
+  <section class="blog-section section--space">
+    <div class="container">
+      <div class="section-head text-center">
+        <h1 class="section-title">Our Latest News</h1>
+      </div>
+      <!-- end section-head -->
+      <div class="row">
+        {%-for news in collections.news-%}
+
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="card card-s1"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="500"
+          >
+            <div class="card-image">
+              <img
+                src="{{ news.data.image }}"
+                alt="service image"
+                class="card-img-top"
+              />
+              <div class="blog-date">
+                <h3>{{ news.data.timeDate }}</h3>
+                <span>{{ news.data.month }}</span>
+              </div>
+            </div>
+            <div class="card-body card-body-s1">
+              <h4 class="card-title mb-3">
+                <a href="blog-details.html">{{ news.data.title }} </a>
+              </h4>
+              <p class="card-text">
+                {{ news.data.para1 }}
+              </p>
+              <ul class="btns-group-link justify-content-between">
+                <li>
+                  <a href="blog-details.html">{{ news.data.btn }}</a>
+                </li>
+                <li>{{ news.data.comment }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {%-endfor-%}
+        <!-- end col -->
+
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end blog-section -->
+  <!--======================================
+        END BLOG
+======================================-->
+</div>
+<!-- end page-wrap -->
