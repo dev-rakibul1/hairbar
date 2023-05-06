@@ -1,8 +1,0 @@
-backend:
-  name: git-gateway
-  repo: dev-rakibul1/hairbar # Path to your Github repository
-  branch: main # Branch to update (master by default)
-
-media_folder: "public/img" # Folder where user uploaded files should go
-public_folder: "/img" # Folder where user uploaded files should go
-
