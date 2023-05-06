@@ -29,6 +29,19 @@ collections: # A list of collections the CMS should be able to edit
       - { name: image, label: Image, widget: image }
       - { name: description, label: description, widget: string }
 
+  # Hours
+  - name: Hours
+    label: hours
+    folder: src/contents/hours
+    create: true
+    fields:
+      - { name: day, label: Day, widget: string }
+      - { name: timeTxt1, label: Time_text_1, widget: string }
+      - { name: timeTxt2, label: Time_text_2, widget: string }
+      - { name: timeCenterText, label: Time_Center_Text, widget: string }
+      - { name: hoursTitle, label: Hours_Title, widget: string }
+      - { name: image, label: image, widget: image }
+
   # About
   - name: About
     label: about
