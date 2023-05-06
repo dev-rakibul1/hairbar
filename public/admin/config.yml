@@ -12,5 +12,10 @@ collections: # A list of collections the CMS should be able to edit
     folder: src/contents/news
     create: true
     fields:
+      - { name: title, label: Title, widget: string }
+      - { name: timeDate, label: title, widget: number }
+      - { name: month, label: Month, widget: string }
+      - { name: btn, label: Button, widget: string }
       - { name: comment, label: comment, widget: string }
-      - { name: title, label: title, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: para1, label: Paragraph, widget: string }
