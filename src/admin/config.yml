@@ -9,7 +9,7 @@ public_folder: "/img" # Folder where user uploaded files should go
 collections: # A list of collections the CMS should be able to edit
   # Hero
   - name: Hero
-    label: Hero
+    label: hero
     folder: src/contents/hero
     create: true
     fields:
