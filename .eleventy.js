@@ -24,6 +24,7 @@ module.exports = function (eleventyConfig) {
 
   // images config
   eleventyConfig.addPassthroughCopy("./src/img/");
+  eleventyConfig.addPassthroughCopy("./src/admin/");
 
   return {
     dir: {
