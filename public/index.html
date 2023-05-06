@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="../css/nice-select.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body>
     <!-- <h1>Home</h1> -->
@@ -1590,6 +1594,18 @@
 </div>
 <!-- end scroll top -->
 </footer>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 
     <!-- template js files -->
     <script src="../js/jquery-3.4.1.min.js"></script>
