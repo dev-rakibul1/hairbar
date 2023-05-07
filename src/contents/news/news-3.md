@@ -5,8 +5,5 @@ month: Apr
 btn: Read more
 comment: 49 comments
 image: /img/about-img-2.jpg
-para1: >-
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo
-  debitis nesciunt nihil officia.
+para1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo debitis nesciunt nihil officia.
 ---
-

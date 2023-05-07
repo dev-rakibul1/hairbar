@@ -67,11 +67,63 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - { name: price, label: Price, widget: string }
       - { name: pricingTitle, label: Pricing_Title, widget: string }
-      - { name: timeTxt1, label: time_Text1, widget: string }
       - { name: image, label: Image, widget: image }
       - { name: desc, label: Description, widget: string }
 
-  # New Feature
+  # Testimonial
+  - name: Testimonial
+    label: testimonial
+    folder: src/contents/testimonial
+    create: true
+    fields:
+      - { name: testimonialTitle, label: Testimonial_Title, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: desc, label: Description, widget: string }
+
+  #Our Team
+  - name: Team
+    label: team
+    folder: src/contents/team
+    create: true
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: profession, label: Profession, widget: string }
+      - { name: image, label: Image, widget: image }
+
+  #Our Products
+  - name: Products
+    label: products
+    folder: src/contents/products
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: btn, label: Button, widget: string }
+      - { name: desc, label: Description, widget: string }
+      - { name: image, label: Image, widget: image }
+
+  #Count
+  - name: Count
+    label: count
+    folder: src/contents/count
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: user, label: user, widget: string }
+
+  #Appointment
+  - name: Appointment
+    label: appointment
+    folder: src/contents/appointment
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: user, label: user, widget: number }
+      - { name: para1, label: Paragraph_1, widget: sting }
+      - { name: para2, label: Paragraph_2, widget: sting }
+      - { name: para3, label: Paragraph_3, widget: sting }
+
+  # News Feature
   - name: News
     label: news
     folder: src/contents/news
