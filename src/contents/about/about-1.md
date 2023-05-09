@@ -1,7 +1,5 @@
 ---
-aboutTitle: >-
-  Our barbershop is the territory created purely for males who appreciate
-  premium quality, time and flawless look.
+aboutTitle: We Will Make Your Hair Stylish & Beautiful
 timeTxt1: Opening Hour
 timeTxt2: Opening Hour
 time: '8:00 am - 10:00 pm'
