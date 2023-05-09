@@ -4,7 +4,7 @@ timeDate: 22
 month: Mar
 btn: Read more
 comment: 27 comments
-image: /img/blog-img2.jpeg
+image: /img/blog-small-img.jpg
 para1: >-
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo
   debitis nesciunt nihil officia.
