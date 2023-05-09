@@ -3,7 +3,6 @@ servicesTitle: Haircut Styles
 image: /img/des-img.jpeg
 description: >-
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo
-  debitis nesciunt nihil officia.
+  debitis nesciunt nihil officia   asofusdjfl.
 tags: service
 ---
-
