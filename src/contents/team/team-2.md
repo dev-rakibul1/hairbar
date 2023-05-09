@@ -1,7 +1,6 @@
 ---
 name: Jems Smith
 profession: Cutting Master
-image: /img/team3.png
-tags:
-  - team
+image: /img/team2.png
+tags: team
 ---
