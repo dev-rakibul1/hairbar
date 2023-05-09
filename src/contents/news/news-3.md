@@ -1,5 +1,5 @@
 ---
-tag: ["news"]
+tags: news
 title: This is a our new news freature title
 timeDate: "14"
 month: Mar
