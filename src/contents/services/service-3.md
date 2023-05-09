@@ -1,8 +1,8 @@
 ---
+tags: service
 servicesTitle: Haircut Styles
 author: Kevin Powell
 date: 2021-05-15
-tags: ["service"]
 image: /img/img3.jpg
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo debitis nesciunt nihil officia.
 ---

@@ -2,7 +2,7 @@
 servicesTitle: Beard Triming
 author: Kevin Powell
 date: 2021-05-15
-tags: ["service"]
+tags: service
 image: /img/img2.jpg
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo debitis nesciunt nihil officia.
 ---

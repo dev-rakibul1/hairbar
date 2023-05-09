@@ -45,6 +45,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: servicesTitle, label: Services_Title, widget: string }
       - { name: image, label: Image, widget: image }
       - { name: description, label: description, widget: string }
+      - { name: tags, label: Tags, widget: string }
 
   # Hours
   - name: Hours
