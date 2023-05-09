@@ -1,0 +1,139 @@
+backend:
+  name: git-gateway
+  repo: dev-rakibul1/hairbar # Path to your Github repository
+  branch: main # Branch to update (master by default)
+
+media_folder: "public/img" # Folder where user uploaded files should go
+public_folder: "/img" # Folder where user uploaded files should go
+
+collections: # A list of collections the CMS should be able to edit
+  # Hero
+  - name: Hero
+    label: hero
+    folder: src/contents/hero
+    create: true
+    fields:
+      - { name: btn1, label: Button_1, widget: string }
+      - { name: btn2, label: Button_2, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: title, label: Title, widget: string }
+      - { name: para1, label: Paragraph, widget: string }
+
+  # About
+  - name: About
+    label: about
+    folder: src/contents/about
+    create: true
+    fields:
+      - { name: aboutTitle, label: About_Title, widget: string }
+      - { name: timeTxt1, label: time_Text1, widget: string }
+      - { name: timeTxt2, label: time_Text2, widget: string }
+      - { name: time, label: Time, widget: string }
+      - { name: image1, label: Image_1, widget: image }
+      - { name: image2, label: Image_2, widget: image }
+      - { name: description, label: Description, widget: string }
+      - { name: button, label: Button, widget: string }
+      - { name: para1, label: Paragraph, widget: string }
+      - { name: para2, label: Paragraph_2, widget: string }
+
+  # Services
+  - name: Service
+    label: services
+    folder: src/contents/services
+    create: true
+    fields:
+      - { name: servicesTitle, label: Services_Title, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: description, label: description, widget: string }
+      - { name: tags, label: Tags, widget: string }
+
+  # Hours
+  - name: Hours
+    label: hours
+    folder: src/contents/hours
+    create: true
+    fields:
+      - { name: day, label: Day, widget: string }
+      - { name: timeTxt1, label: Time_text_1, widget: string }
+      - { name: timeTxt2, label: Time_text_2, widget: string }
+      - { name: timeCenterText, label: Time_Center_Text, widget: string }
+      - { name: hoursTitle, label: Hours_Title, widget: string }
+      - { name: image, label: image, widget: image }
+
+  # Pricing
+  - name: Pricing
+    label: pricing
+    folder: src/contents/pricing
+    create: true
+    fields:
+      - { name: price, label: Price, widget: string }
+      - { name: pricingTitle, label: Pricing_Title, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: desc, label: Description, widget: string }
+
+  # Testimonial
+  - name: Testimonial
+    label: testimonial
+    folder: src/contents/testimonial
+    create: true
+    fields:
+      - { name: testimonialTitle, label: Testimonial_Title, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: desc, label: Description, widget: string }
+
+  #Our Team
+  - name: Team
+    label: team
+    folder: src/contents/team
+    create: true
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: profession, label: Profession, widget: string }
+      - { name: image, label: Image, widget: image }
+
+  #Our Products
+  - name: Products
+    label: products
+    folder: src/contents/products
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: btn, label: Button, widget: string }
+      - { name: desc, label: Description, widget: string }
+      - { name: image, label: Image, widget: image }
+
+  #Count
+  - name: Count
+    label: count
+    folder: src/contents/count
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: user, label: user, widget: string }
+
+  #Appointment
+  - name: Appointment
+    label: appointment
+    folder: src/contents/appointment
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: user, label: user, widget: number }
+      - { name: para1, label: Paragraph_1, widget: sting }
+      - { name: para2, label: Paragraph_2, widget: sting }
+      - { name: para3, label: Paragraph_3, widget: sting }
+
+  # News Feature
+  - name: News
+    label: news
+    folder: src/contents/news
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: timeDate, label: Title, widget: number }
+      - { name: month, label: Month, widget: string }
+      - { name: btn, label: Button, widget: string }
+      - { name: comment, label: comment, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: para1, label: Paragraph, widget: string }
