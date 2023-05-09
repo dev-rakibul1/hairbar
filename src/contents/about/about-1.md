@@ -4,7 +4,7 @@ timeTxt1: Opening Hour
 timeTxt2: Opening Hour
 time: '8:00 am - 10:00 pm'
 image1: /img/about-img.jpg
-image2: /img/blog-small-img.jpg
+image2: /img/about-img-2.jpg
 description: >-
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo
   debitis nesciunt nihil officia.
