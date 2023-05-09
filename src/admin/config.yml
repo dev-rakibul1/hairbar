@@ -18,6 +18,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: image, label: Image, widget: image }
       - { name: title, label: Title, widget: string }
       - { name: para1, label: Paragraph, widget: string }
+      - { name: tags, label: Tags, widget: string }
 
   # About
   - name: About
@@ -35,6 +36,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: button, label: Button, widget: string }
       - { name: para1, label: Paragraph, widget: string }
       - { name: para2, label: Paragraph_2, widget: string }
+      - { name: tags, label: Tags, widget: string }
 
   # Services
   - name: Service
@@ -59,6 +61,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: timeCenterText, label: Time_Center_Text, widget: string }
       - { name: hoursTitle, label: Hours_Title, widget: string }
       - { name: image, label: image, widget: image }
+      - { name: tags, label: Tags, widget: string }
 
   # Pricing
   - name: Pricing
@@ -70,6 +73,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: pricingTitle, label: Pricing_Title, widget: string }
       - { name: image, label: Image, widget: image }
       - { name: desc, label: Description, widget: string }
+      - { name: tags, label: Tags, widget: string }
 
   # Testimonial
   - name: Testimonial
@@ -80,6 +84,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: testimonialTitle, label: Testimonial_Title, widget: string }
       - { name: image, label: Image, widget: image }
       - { name: desc, label: Description, widget: string }
+      - { name: tags, label: Tags, widget: string }
 
   #Our Team
   - name: Team
@@ -90,6 +95,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: name, label: Name, widget: string }
       - { name: profession, label: Profession, widget: string }
       - { name: image, label: Image, widget: image }
+      - { name: tags, label: Tags, widget: string }
 
   #Our Products
   - name: Products
@@ -102,6 +108,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: btn, label: Button, widget: string }
       - { name: desc, label: Description, widget: string }
       - { name: image, label: Image, widget: image }
+      - { name: tags, label: Tags, widget: string }
 
   #Count
   - name: Count
@@ -111,6 +118,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - { name: title, label: Title, widget: string }
       - { name: user, label: user, widget: string }
+      - { name: tags, label: Tags, widget: string }
 
   #Appointment
   - name: Appointment
@@ -123,6 +131,7 @@ collections: # A list of collections the CMS should be able to edit
       - { name: para1, label: Paragraph_1, widget: sting }
       - { name: para2, label: Paragraph_2, widget: sting }
       - { name: para3, label: Paragraph_3, widget: sting }
+      - { name: tags, label: Tags, widget: string }
 
   # News Feature
   - name: News
@@ -137,3 +146,4 @@ collections: # A list of collections the CMS should be able to edit
       - { name: comment, label: comment, widget: string }
       - { name: image, label: Image, widget: image }
       - { name: para1, label: Paragraph, widget: string }
+      - { name: tags, label: Tags, widget: string }
