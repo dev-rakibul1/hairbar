@@ -5,8 +5,6 @@ timeDate: 22
 month: Mar
 btn: Read more
 comment: 27 comments
-image: /img/about-us.jpg
-para1: >-
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo
-  debitis nesciunt nihil officia.
+image: /img/img2.jpg
+para1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo debitis nesciunt nihil officia.
 ---
