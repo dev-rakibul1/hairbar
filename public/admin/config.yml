@@ -153,8 +153,8 @@ collections: # A list of collections the CMS should be able to edit
 
   # Award-winning
 
-  - name: Award-winning
-    label: Award-winning
+  - name: AwardWinning
+    label: AwardWinning
     folder: src/contents/AwardWinning
     create: true
     fields:
