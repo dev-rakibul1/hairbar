@@ -7,6 +7,7 @@ media_folder: "public/img" # Folder where user uploaded files should go
 public_folder: "/img" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
+  # ================================MAIN HOME PAGE ALL INFORMATION INCLUDES HERE==============================
   # Hero
   - name: Hero
     label: hero
@@ -146,4 +147,21 @@ collections: # A list of collections the CMS should be able to edit
       - { name: comment, label: comment, widget: string }
       - { name: image, label: Image, widget: image }
       - { name: para1, label: Paragraph, widget: string }
+      - { name: tags, label: Tags, widget: string }
+
+  # ================================ HOME PAGE 2 ALL INFORMATION INCLUDES HERE==============================
+
+  # Award-winning
+
+  - name: Award-winning
+    label: Award-winning
+    folder: src/contents/AwardWinning
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: para1, label: Article, widget: string }
+      - { name: btn1, label: Appointment, widget: string }
+      - { name: btn2, label: Read more, widget: string }
+      - { name: image1, label: Image, widget: image }
+      - { name: image1Alt, label: Image Alt, widget: string }
       - { name: tags, label: Tags, widget: string }

@@ -595,7 +595,7 @@ layout: "base.njk"
           >
             <div class="card-image">
               <img
-                src="{{ news.data.image }}"
+                src="{{ news.data.featureImage }}"
                 alt="service image"
                 class="card-img-top"
               />
@@ -606,14 +606,14 @@ layout: "base.njk"
             </div>
             <div class="card-body card-body-s1">
               <h4 class="card-title mb-3">
-                <a href="blog-details.html">{{ news.data.title }} </a>
+                <a href="{{ news.url }}">{{ news.data.title }} </a>
               </h4>
               <p class="card-text">
                 {{ news.data.para1 }}
               </p>
               <ul class="btns-group-link justify-content-between">
                 <li>
-                  <a href="blog-details.html">{{ news.data.btn }}</a>
+                  <a href="{{ news.url }}">{{ news.data.btn }}</a>
                 </li>
                 <li>{{ news.data.comment }}</li>
               </ul>

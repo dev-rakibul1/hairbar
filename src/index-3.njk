@@ -11,12 +11,12 @@ layout: "base.njk"
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center pr-lg-5">
+          {%-for home_3_hero in collections.home_3_hero-%}
+
           <div class="hero-content mb-5 mb-lg-0">
-            <h1 class="hero-title mb-4">We Specialize In All Phase Of hair</h1>
+            <h1 class="hero-title mb-4">{{ home_3_hero.data.title }}</h1>
             <p class="hero-text">
-              His itself may also face is creepeth fifth over dominion whose a
-              Bring there created greater day multipl. His itself may also face
-              is creep fifth over dominion whose no analyze market
+              {{ home_3_hero.data.para1 }}
             </p>
             <div class="gap-2x"></div>
             <!-- end gap -->
@@ -25,7 +25,7 @@ layout: "base.njk"
                 <a
                   href="contact.html"
                   class="btn btn-lg btn-round-none btn-primary"
-                  >Appointment</a
+                  >{{ home_3_hero.data.btn }}</a
                 >
               </li>
               <li>
@@ -34,16 +34,24 @@ layout: "base.njk"
                   href="https://www.youtube.com/watch?v=pVE92TNDwUk"
                   data-fancybox="preview-video"
                   title="Play Video"
-                  ><i class="far icon-element fa-play"></i> Intro Video</a
+                  ><i class="far icon-element fa-play"></i>
+                  {{ home_3_hero.data.videoBtn }}</a
                 >
               </li>
             </ul>
           </div>
+          {%-endfor-%}
         </div>
         <!-- end col -->
         <div class="col-lg-6">
           <div class="hero-banner-img">
-            <img class="img-fluid" src="/img/hero-4.jpg" alt="" />
+            {%-for home_3_hero_image in collections.home_3_hero_image-%}
+            <img
+              class="img-fluid"
+              src=" {{ home_3_hero_image.data.image1 }}"
+              alt=""
+            />
+            {%-endfor-%}
           </div>
         </div>
       </div>
@@ -66,8 +74,12 @@ layout: "base.njk"
     <div class="row">
       <div class="col-lg-5">
         <div class="section-head pb-4">
-          <h4 class="section-intro-title">Advance Feature</h4>
-          <h1 class="section-title">Our Strength Is Your Smart beauty</h1>
+          {%-for home_3_advance_f_title in collections.home_3_advance_f_title-%}
+          <h4 class="section-intro-title">
+            {{ home_3_advance_f_title.data.meta }}
+          </h4>
+          <h1 class="section-title">{{ home_3_advance_f_title.data.title }}</h1>
+          {%-endfor-%}
         </div>
         <!-- end section-head -->
       </div>
@@ -75,70 +87,22 @@ layout: "base.njk"
     </div>
     <!-- end row -->
     <div class="row gutters-48">
+      {%-for home_3_advance_feature in collections.home_3_advance_feature-%}
       <div class="col-lg-3 col-md-6">
         <div class="card card-s2 text-center">
           <div class="card-body">
             <div class="icon-element mx-auto mb-4">
               <i class="fal fa-chair-office"></i>
             </div>
-            <h4 class="card-title">Best Place</h4>
+            <h4 class="card-title">{{ home_3_advance_feature.data.title }}</h4>
             <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur.
+              {{ home_3_advance_feature.data.para1 }}
             </p>
           </div>
         </div>
         <!-- end card -->
       </div>
-      <!-- end col -->
-      <div class="col-lg-3 col-md-6">
-        <div class="card card-s2 text-center">
-          <div class="card-body">
-            <div class="icon-element mx-auto mb-4">
-              <i class="fal fa-hand-scissors"></i>
-            </div>
-            <h4 class="card-title">Best Equipment</h4>
-            <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur.
-            </p>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
-      <div class="col-lg-3 col-md-6">
-        <div class="card card-s2 text-center">
-          <div class="card-body">
-            <div class="icon-element mx-auto mb-4">
-              <i class="fal fa-dewpoint"></i>
-            </div>
-            <h4 class="card-title">Modern Style</h4>
-            <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur.
-            </p>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
-      <div class="col-lg-3 col-md-6">
-        <div class="card card-s2 text-center">
-          <div class="card-body">
-            <div class="icon-element mx-auto mb-4">
-              <i class="fal fa-user"></i>
-            </div>
-            <h4 class="card-title">Expert Staff</h4>
-            <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur.
-            </p>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
+      {%-endfor-%}
     </div>
     <!-- end row -->
   </div>
@@ -152,13 +116,14 @@ layout: "base.njk"
 <!--======================================
         START VIDEO
 ======================================-->
+{%-for home_3_view_work in collections.home_3_view_work-%}
 <section
   class="video-section section-space set-bg overlay on-dark"
-  data-setbg="/img/hero-3.jpg"
+  data-setbg="{{ home_3_view_work.data.image1 }}"
 >
   <div class="container">
     <div class="section-head text-center mb-0">
-      <h1 class="section-title">View Our Work</h1>
+      <h1 class="section-title">{{ home_3_view_work.data.title }}</h1>
       <a
         class="icon-element mx-auto pulse-btn"
         href="https://www.youtube.com/watch?v=pVE92TNDwUk"
@@ -167,12 +132,13 @@ layout: "base.njk"
       >
         <i class="far fa-play icon"></i>
       </a>
-      <p class="section-desc mb-0">05:20</p>
+      <p class="section-desc mb-0">{{ home_3_view_work.data.time }}</p>
     </div>
     <!-- end section-head -->
   </div>
   <!-- end container -->
 </section>
+{%-endfor-%}
 <!-- end video-section -->
 <!--======================================
         END VIDEO
@@ -186,8 +152,12 @@ layout: "base.njk"
     <div class="row">
       <div class="col-lg-5">
         <div class="section-head pb-4">
-          <h4 class="section-intro-title">Our Services</h4>
-          <h1 class="section-title">Our Strength Is Your Smart beauty</h1>
+          {%-for home_3_service_title in collections.home_3_service_title-%}
+          <h4 class="section-intro-title">
+            {{ home_3_service_title.data.meta }}
+          </h4>
+          <h1 class="section-title">{{ home_3_service_title.data.title }}</h1>
+          {%-endfor-%}
         </div>
         <!-- end section-head -->
       </div>
@@ -195,60 +165,25 @@ layout: "base.njk"
     </div>
     <!-- end row -->
     <div class="row gutters-48 random-card-wrap">
+      {%-for home_3_Our_Services in collections.home_3_Our_Services-%}
       <div class="col-lg-4 col-md-6">
         <div class="card card-s2 text-center">
           <div class="card-body">
             <div class="icon-element mx-auto mb-4">
               <i class="fal fa-hand-scissors"></i>
             </div>
-            <h4 class="card-title">Stylish Hair Cut</h4>
+            <h4 class="card-title">{{ home_3_Our_Services.data.title }}</h4>
             <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur, labore totam. Accusamus perspiciatis asperiores
-              labore esse.
+              {{ home_3_Our_Services.data.para1 }}
             </p>
-            <a href="#" class="btn btn-md btn-primary mt-4">Book Now</a>
+            <a href="#" class="btn btn-md btn-primary mt-4">{{
+              home_3_Our_Services.data.btn
+            }}</a>
           </div>
         </div>
         <!-- end card -->
       </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-s2 text-center">
-          <div class="card-body">
-            <div class="icon-element mx-auto mb-4">
-              <i class="fal fa-chair-office"></i>
-            </div>
-            <h4 class="card-title">Cut & Hair Style</h4>
-            <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur, labore totam. Accusamus perspiciatis asperiores
-              labore esse.
-            </p>
-            <a href="#" class="btn btn-md btn-primary mt-4">Book Now</a>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-s2 text-center">
-          <div class="card-body">
-            <div class="icon-element mx-auto mb-4">
-              <i class="fal fa-dewpoint"></i>
-            </div>
-            <h4 class="card-title">Color & Hair Wash</h4>
-            <p class="card-text">
-              Porro repellat vero sapiente amet vitae quibusdam necessitatibus
-              consectetur, labore totam. Accusamus perspiciatis asperiores
-              labore esse.
-            </p>
-            <a href="#" class="btn btn-md btn-primary mt-4">Book Now</a>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
+      {%-endfor-%}
     </div>
     <!-- end row -->
   </div>
@@ -267,8 +202,12 @@ layout: "base.njk"
     <div class="row">
       <div class="col-lg-5">
         <div class="section-head pb-2">
-          <h4 class="section-intro-title">Our Team</h4>
-          <h1 class="section-title">Experience Staff Change Your Look</h1>
+          {%-for home_3_team_title in collections.home_3_team_title-%}
+          <h4 class="section-intro-title">
+            {{ home_3_team_title.data.meta }}
+          </h4>
+          <h1 class="section-title">{{ home_3_team_title.data.title }}</h1>
+          {%-endfor-%}
         </div>
         <!-- end section-head -->
       </div>
@@ -276,6 +215,7 @@ layout: "base.njk"
     </div>
     <!-- end row -->
     <div class="row">
+      {%-for home_3_team in collections.home_3_team-%}
       <div class="col-lg-4 col-sm-6">
         <div
           class="card card-s1 card-team card-team-s2"
@@ -284,94 +224,42 @@ layout: "base.njk"
           data-aos-duration="500"
         >
           <div class="card-image">
-            <img src="/img/team.png" alt="team image" class="card-img-top" />
+            <img
+              src="{{ home_3_team.data.image }}"
+              alt="team image"
+              class="card-img-top"
+            />
           </div>
           <div class="card-body">
-            <h4 class="card-title mb-1">Jhon Smith</h4>
+            <h4 class="card-title mb-1">{{ home_3_team.data.title }}</h4>
             <p class="card-text">Cutting Master</p>
             <ul class="social-profile-icons social-profile-icons-s2">
               <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="{{ home_3_team.data.fa }}"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="{{ home_3_team.data.tw }}"
+                  ><i class="fab fa-twitter"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="{{ home_3_team.data.ins }}"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="{{ home_3_team.data.lin }}"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
               </li>
             </ul>
           </div>
         </div>
         <!-- end card -->
       </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-sm-6">
-        <div
-          class="card card-s1 card-team card-team-s2"
-          data-aos="zoom-out"
-          data-aos-delay="250"
-          data-aos-duration="800"
-        >
-          <div class="card-image">
-            <img src="/img/team2.png" alt="team image" class="card-img-top" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-1">Jems Smith</h4>
-            <p class="card-text">Cutting Master</p>
-            <ul class="social-profile-icons social-profile-icons-s2">
-              <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-sm-6">
-        <div
-          class="card card-s1 card-team card-team-s2"
-          data-aos="zoom-out"
-          data-aos-delay="350"
-          data-aos-duration="1000"
-        >
-          <div class="card-image">
-            <img src="/img/team3.png" alt="team image" class="card-img-top" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-1">Thomas J Watson</h4>
-            <p class="card-text">Cutting Master</p>
-            <ul class="social-profile-icons social-profile-icons-s2">
-              <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
+      {%-endfor-%}
     </div>
     <!-- end row -->
   </div>
@@ -399,81 +287,33 @@ layout: "base.njk"
     </div>
     <!-- end row -->
     <div class="row gutters-48">
+      {%-for home_2_package in collections.home_2_package-%}
       <div class="col-lg-4 col-md-6">
-        <div class="card card-s2 card-price text-center">
+        <div class="card card-s1 card-price text-center">
           <div class="card-top">
-            <h4 class="mb-2 top-title">Basic Hair Cut</h4>
-            <p class="top-desc">Standard Package</p>
+            <h4 class="mb-2 top-title">{{ home_2_package.data.title }}</h4>
+            <p class="top-desc">{{ home_2_package.data.meta }}</p>
           </div>
           <div class="single-price">
-            <h1 class="price-title">$79.00</h1>
+            <h1 class="price-title">{{ home_2_package.data.price }}</h1>
           </div>
           <ul class="list-item price-list">
-            <li>Basic hair Cut</li>
-            <li>Basic Shave</li>
-            <li>Basic Head Wash</li>
-            <li>Basic Body Massage</li>
-            <li>Basic Snacks</li>
+            <li>{{ home_2_package.data.pack_ann1 }}</li>
+            <li>{{ home_2_package.data.pack_ann2 }}li></li>
+            <li>{{ home_2_package.data.pack_ann3 }}</li>
+            <li>{{ home_2_package.data.pack_ann4 }}</li>
+            <li>{{ home_2_package.data.pack_ann5 }}li></li>
           </ul>
+
           <div class="price-btn-wrap">
-            <a href="#" class="btn btn-md btn-primary btn-block btn-upper"
-              >Order Now</a
-            >
+            <a href="#" class="btn btn-md btn-primary btn-block btn-upper">{{
+              home_2_package.data.btn
+            }}</a>
           </div>
         </div>
         <!-- end card -->
       </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-s2 card-price text-center is-active">
-          <div class="card-top">
-            <h4 class="mb-2 top-title">Premium Hair Cut</h4>
-            <p class="top-desc">Standard Package</p>
-          </div>
-          <div class="single-price">
-            <h1 class="price-title">$89.00</h1>
-          </div>
-          <ul class="list-item price-list">
-            <li>Basic hair Cut</li>
-            <li>Basic Shave</li>
-            <li>Basic Head Wash</li>
-            <li>Basic Body Massage</li>
-            <li>Basic Snacks</li>
-          </ul>
-          <div class="price-btn-wrap">
-            <a href="#" class="btn btn-md btn-primary btn-block btn-upper"
-              >Order Now</a
-            >
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-s2 card-price text-center">
-          <div class="card-top">
-            <h4 class="mb-2 top-title">Luxury Hair Cut</h4>
-            <p class="top-desc">Standard Package</p>
-          </div>
-          <div class="single-price">
-            <h1 class="price-title">$99.00</h1>
-          </div>
-          <ul class="list-item price-list">
-            <li>Basic hair Cut</li>
-            <li>Basic Shave</li>
-            <li>Basic Head Wash</li>
-            <li>Basic Body Massage</li>
-            <li>Basic Snacks</li>
-          </ul>
-          <div class="price-btn-wrap">
-            <a href="#" class="btn btn-md btn-primary btn-block btn-upper"
-              >Order Now</a
-            >
-          </div>
-        </div>
-        <!-- end card -->
-      </div>
-      <!-- end col -->
+      {%-endfor -%}
     </div>
     <!-- end row -->
   </div>
@@ -490,30 +330,18 @@ layout: "base.njk"
 <section class="testimonial-section text-center section-space-b">
   <div class="container">
     <div class="testimonial-slider owl-carousel owl-theme">
+      {%-for testimonial in collections.testimonial-%}
+
       <div class="testimonial-item">
-        <p class="lead mb-4">
-          Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
-          purus condimentum a. <br />Aliquam condimentum mattis neque sed
-          pretium
-        </p>
+        <p class="lead mb-4">{{ testimonial.data.desc }}</p>
         <div class="avatar mx-auto mb-3">
-          <img src="/img/small-img2.png" alt="" />
+          <img src="{{ testimonial.data.image }}" alt="" />
         </div>
-        <h5 class="testimonial-title">Alex Smith</h5>
+        <h5 class="testimonial-title">
+          {{ testimonial.data.testimonialTitle }}
+        </h5>
       </div>
-      <!-- end testimonial-item -->
-      <div class="testimonial-item">
-        <p class="lead mb-4">
-          Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
-          purus condimentum a. <br />Aliquam condimentum mattis neque sed
-          pretium
-        </p>
-        <div class="avatar mx-auto mb-3">
-          <img src="/img/small-img2.png" alt="" />
-        </div>
-        <h5 class="testimonial-title">Kevin Martin</h5>
-      </div>
-      <!-- end testimonial-item -->
+      {%-endfor-%}
     </div>
   </div>
   <!-- end container -->
@@ -530,8 +358,13 @@ layout: "base.njk"
     <div class="row">
       <div class="col-lg-5">
         <div class="section-head">
-          <h4 class="section-intro-title">Our Blog</h4>
-          <h1 class="section-title">Read The Latest Hair Style News</h1>
+          {%-for home_3_our_blog_title in collections.home_3_our_blog_title-%}
+
+          <h4 class="section-intro-title">
+            {{ home_3_our_blog_title.data.meta }}
+          </h4>
+          <h1 class="section-title">{{ home_3_our_blog_title.data.title }}</h1>
+          {%-endfor-%}
         </div>
         <!-- end section-head -->
       </div>
@@ -539,65 +372,31 @@ layout: "base.njk"
     </div>
     <!-- end row -->
     <div class="row">
+      {%-for home_3_our_blog in collections.home_3_our_blog-%}
       <div class="col-lg-4 col-md-6">
         <div class="card card-s3">
           <div class="card-image">
-            <img src="/img/img1.jpg" alt="service image" class="card-img" />
+            <img
+              src="{{ home_3_our_blog.data.image1 }}"
+              alt="service image"
+              class="card-img"
+            />
           </div>
           <div class="card-body card-body-s1">
             <span class="mb-2 d-block small"
-              ><i class="fal fa-calendar-alt mr-1"></i> 28 February 2020</span
+              ><i class="fal fa-calendar-alt mr-1"></i
+              >{{ home_3_our_blog.data.newDate }}</span
             >
             <h4 class="card-title mb-3">
-              <a href="blog-details.html">Make The Most Of Your Locks</a>
+              <a href="blog-details.html">{{ home_3_our_blog.data.title }}</a>
             </h4>
-            <a href="blog-details.html" class="btn-link btn-link-s1"
-              >Read More</a
-            >
+            <a href="blog-details.html" class="btn-link btn-link-s1">{{
+              home_3_our_blog.data.btn
+            }}</a>
           </div>
         </div>
       </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-s3">
-          <div class="card-image">
-            <img src="/img/img2.jpg" alt="service image" class="card-img" />
-          </div>
-          <div class="card-body card-body-s1">
-            <span class="mb-2 d-block small"
-              ><i class="fal fa-calendar-alt mr-1"></i> 12 March 2020</span
-            >
-            <h4 class="card-title mb-3">
-              <a href="blog-details.html">Chic They Work Any Occassion</a>
-            </h4>
-            <a href="blog-details.html" class="btn-link btn-link-s1"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- end col -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-s3">
-          <div class="card-image">
-            <img src="/img/img3.jpg" alt="service image" class="card-img" />
-          </div>
-          <div class="card-body card-body-s1">
-            <span class="mb-2 d-block small"
-              ><i class="fal fa-calendar-alt mr-1"></i> 22 April 2020</span
-            >
-            <h4 class="card-title mb-3">
-              <a href="blog-details.html"
-                >Easy Hairstyles For GirlHair and BoyHair</a
-              >
-            </h4>
-            <a href="blog-details.html" class="btn-link btn-link-s1"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- end col -->
+      {%-endfor-%}
     </div>
     <!-- end row -->
   </div>

@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/owl.carousel.min.css");
   eleventyConfig.addPassthroughCopy("./src/css/owl.theme.default.min.css");
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
+  eleventyConfig.addPassthroughCopy("./src/style.css");
 
   // javascript file config
   eleventyConfig.addPassthroughCopy("./src/js/aos-inital.js");
