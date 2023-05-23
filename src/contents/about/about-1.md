@@ -8,7 +8,7 @@ image2: /img/about-img-2.jpg
 description: >-
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur quo
   debitis nesciunt nihil officia.
-button: Read more
+button: Lean more
 para1: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing eliteiusmod tempor
   incididunt ut labore et dolore magna aliqua. Qpsum suspendisse ultrices
