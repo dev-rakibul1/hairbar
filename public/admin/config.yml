@@ -165,3 +165,17 @@ collections: # A list of collections the CMS should be able to edit
       - { name: image1, label: Image, widget: image }
       - { name: image1Alt, label: Image Alt, widget: string }
       - { name: tags, label: Tags, widget: string }
+
+  # Home_2 blog
+  - name: home_2_blog
+    label: home_2_blog
+    folder: src/contents/home_2/home_2_blog
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: time, label: Time, widget: number }
+      - { name: like, label: Like, widget: string }
+      - { name: comment, label: comment, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: para1, label: Paragraph, widget: string }
+      - { name: tags, label: Tags, widget: string }
